@@ -24,7 +24,7 @@ public class Menu extends Application {
         stage.setFullScreen(true);
         stage.setScene(scene);
 
-        createButtons();
+        createButtons(stage);
 
         stage.show();
     }
@@ -33,16 +33,16 @@ public class Menu extends Application {
         // TODO: Setup everything that needs to be done for displaying the game
     }
 
-    private void openSettings() {
+    private void openSettings(Stage stage) {
         // TODO: Display the settings menu to the user
     }
 
-    private void createButtons() {
-//        Button startGameButton = new Button("Start Game");
-//        startGameButton.setOnAction(e -> startGame());
+    private void createButtons(Stage stage) {
+        Button startGameButton = new Button("Start Game");
+        startGameButton.setOnAction(e -> startGame());
 
-//        Button settingsButton = new Button("Settings");
-//        settingsButton.setOnAction(e -> openSettings());
+        Button settingsButton = new Button("Settings");
+        settingsButton.setOnAction(e -> openSettings(stage));
 
         Button exitButton = new Button("Exit");
         exitButton.setOnAction(e -> System.exit(0));
